@@ -4,13 +4,14 @@
 function Gallery({ galleryItems }) {
     //  run through the galleryItem and map them to the DOM.
     //  Let's just get the posters up first and then add Switches.
+    console.log(galleryItems);
 
     return (
         <>
-        {galleryItems.map((poster) => (
-                <div key={poster.id} >
-                    <img src={poster.path}> </img>
-                    <p>{poster.likes}</p>
+        {galleryItems.map((galleryItems) => (
+                <div key={galleryItems.id} >
+                    <img src={galleryItems.path}></img>
+                    <p>{galleryItems.likes}</p>
                     </div> 
         ))}
         </>

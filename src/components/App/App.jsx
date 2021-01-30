@@ -7,25 +7,31 @@ import Gallery from '../Gallery/Gallery.jsx';  //src/components/Gallery
 
 function App() {
   //  Hooks go here.
-  const [galleryItems, setGalleryItems] = useState();
+  const [galleryItems, setGalleryItems] = useState([]);
 
+
+  //  GET goes here
+  const fetchGallery = () => {
+    axios({
+      method: 'GET',
+      url: '/gallery'
+    }).then((response) => {
+      console.log(response);
+      console.log(response.data);
+      setGalleryItems(response.data);
+      console.log(response.data);
+      console.log(galleryItems);
+    }).catch((error) => {
+      console.log(error)
+    })
+    console.log(galleryItems);
+  }
+  console.log(galleryItems);
 
   //  load gallery on init
   useEffect(() => {
     fetchGallery();
   }, []);
-
-
-  //  GET goes here
-  const fetchGallery = () => {
-    axios.get('/gallery').then((response) => {
-      setGalleryItems(response.data);
-    }).catch((error) => {
-      console.log(error)
-    })
-    console.log(galleryItems);
-
-  }
 
 
   return (
@@ -37,7 +43,7 @@ function App() {
       <Gallery
         galleryItems={galleryItems}
         fetchGallery={fetchGallery}
-//  probably add props for switch and like.
+      //  probably add props for switch and like.
       />
 
 
