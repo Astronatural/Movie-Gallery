@@ -31,7 +31,7 @@ function App() {
 
     axios({
       method: 'PUT',
-      url: `/like/${itemId}`,   //    axios.put('/like/', { id: itemId }  `/like/${itemId }`
+      url: `/gallery/like/${itemId}`,   //    axios.put('/like/', { id: itemId }  `/like/${itemId }`
     }).then((response) => {
       fetchGallery();
       console.log(response);
