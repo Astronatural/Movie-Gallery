@@ -1,7 +1,7 @@
 //  import galleryItems from "../../../server/modules/gallery.data";  //  server/modules/gallery.data.js
-//  import Switches from "../Swtiches/Switches";
+//  import GalleryItem from "../GalleryItem/GalleryItem.jsx";
 
-function Gallery({ galleryItems }) {
+function GalleryList({ galleryItems }) {
     //  run through the galleryItem and map them to the DOM.
     //  Let's just get the posters up first and then add Switches.
     console.log(galleryItems);
@@ -10,7 +10,7 @@ function Gallery({ galleryItems }) {
         <>
         {galleryItems.map((galleryItems) => (
                 <div key={galleryItems.id} >
-                    <img src={galleryItems.path}></img>
+                    <img src={galleryItems.path} width="15%" height="20%"></img>
                     <p>{galleryItems.likes}</p>
                     </div> 
         ))}
@@ -18,4 +18,4 @@ function Gallery({ galleryItems }) {
         ) /* end return*/
         } /* end gellery*/
 
-export default Gallery;
+export default GalleryList;

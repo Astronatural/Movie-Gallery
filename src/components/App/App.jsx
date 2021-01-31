@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Gallery from '../Gallery/Gallery.jsx';  //src/components/Gallery
+import GalleryList from '../GalleryList/GalleryList.jsx';  //src/components/Gallery
 
 
 function App() {
@@ -26,7 +26,6 @@ function App() {
     })
     console.log(galleryItems);
   }
-  console.log(galleryItems);
 
   //  load gallery on init
   useEffect(() => {
@@ -40,7 +39,7 @@ function App() {
         <h1 className="App-title">Favorite Movies of Mine; an Autobiogrphical-Cinematic Retrospective</h1>
       </header>
       <p>Gallery goes here</p>
-      <Gallery
+      <GalleryList
         galleryItems={galleryItems}
         fetchGallery={fetchGallery}
       //  probably add props for switch and like.

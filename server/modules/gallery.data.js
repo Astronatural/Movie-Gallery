@@ -1,5 +1,4 @@
 const galleryItems = [
-    { id: 1, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 0 },
     { id: 2, path: 'images/robin_hood.jpg', description: 'My first favorite movie.  Still my most watched, probably.', likes: 0 },
     { id: 3, path: 'images/night-of-the-living-dead.jpg', description: 'First scary movie I liked and still a favorite today.', likes: 0 },
     { id: 4, path: 'images/road_warrior.jpg', description: 'Fantastic movie with better dialouge than an action film deserves.', likes: 0 },
