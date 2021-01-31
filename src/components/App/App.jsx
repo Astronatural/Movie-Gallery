@@ -3,6 +3,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList.jsx';  //src/components/Gallery
+import GalleryItem from '../GalleryItem/GalleryItem.jsx';  //src/components/Gallery
 
 
 function App() {
@@ -16,16 +17,31 @@ function App() {
       method: 'GET',
       url: '/gallery'
     }).then((response) => {
-      console.log(response);
       console.log(response.data);
       setGalleryItems(response.data);
-      console.log(response.data);
-      console.log(galleryItems);
     }).catch((error) => {
       console.log(error)
     })
-    console.log(galleryItems);
   }
+
+  // Install the "likes" functionality.
+  const setLike = (itemId) => {
+    console.log(`Fav button pressed! target id`, itemId);
+    console.log({ id: itemId });
+
+    axios({
+      method: 'PUT',
+      url: `/like/${itemId}`,   //    axios.put('/like/', { id: itemId }  `/like/${itemId }`
+    }).then((response) => {
+      fetchGallery();
+      console.log(response);
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
+
+
 
   //  load gallery on init
   useEffect(() => {
@@ -41,11 +57,13 @@ function App() {
       <GalleryList
         galleryItems={galleryItems}
         fetchGallery={fetchGallery}
-      //  probably add props for switch and like.
+        setLike={setLike}
       />
-
-
-      <img src="images/goat_small.jpg" />
+      {/* <GalleryItem
+        galleryItems={galleryItems}
+        fetchGallery={fetchGallery}
+        setLike={setLike}
+      /> */}
     </div>
   );
 }
