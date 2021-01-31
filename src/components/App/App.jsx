@@ -38,7 +38,6 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Favorite Movies of Mine; an Autobiogrphical-Cinematic Retrospective</h1>
       </header>
-      <p>Gallery goes here</p>
       <GalleryList
         galleryItems={galleryItems}
         fetchGallery={fetchGallery}

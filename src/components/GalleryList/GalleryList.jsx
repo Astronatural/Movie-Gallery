@@ -1,5 +1,5 @@
 //  import galleryItems from "../../../server/modules/gallery.data";  //  server/modules/gallery.data.js
-//  import GalleryItem from "../GalleryItem/GalleryItem.jsx";
+  import GalleryItem from "../GalleryItem/GalleryItem.jsx";
 
 function GalleryList({ galleryItems }) {
     //  run through the galleryItem and map them to the DOM.
@@ -8,14 +8,13 @@ function GalleryList({ galleryItems }) {
 
     return (
         <>
-        {galleryItems.map((galleryItems) => (
+            {galleryItems.map((galleryItems) => (
                 <div key={galleryItems.id} >
-                    <img src={galleryItems.path} width="15%" height="20%"></img>
-                    <p>{galleryItems.likes}</p>
-                    </div> 
-        ))}
+                    <GalleryItem galleryItems={galleryItems} />
+                </div>
+            ))}
         </>
-        ) /* end return*/
-        } /* end gellery*/
+    ) /* end return*/
+} /* end gellery*/
 
 export default GalleryList;
