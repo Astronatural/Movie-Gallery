@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import './gi.css';
+
 
 function GalleryItem({ galleryItems, setLike }) {
 
@@ -16,10 +18,10 @@ function GalleryItem({ galleryItems, setLike }) {
     // build tags for elements
     const picSwap = () => {
      if (clickState) {
-         return  <img src={galleryItems.path} width="15%" height="20%"></img>
+         return  <img src={galleryItems.path} width="45%" height="60%" margin="10em"></img>
      }
      else {
-           return <p>{galleryItems.description}</p>
+         return <p width="45%" height="60%" margin="10em">{galleryItems.description}</p>
     }
     }
    

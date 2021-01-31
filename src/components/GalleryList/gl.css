@@ -1,0 +1,18 @@
+.posterBox {
+    box-sizing: border-box; 
+    background-color: rgb(194, 187, 158);
+    border-radius: 8px;
+    width: 30em; 
+    height: 35em;
+    display: flex;
+    justify-content: center ;
+    flex-direction: column ;
+    margin: .5em;
+    border: rgb(109, 109, 109) solid 1em;
+    border-style: ridge;
+}
+
+.posterWall {
+    column-count: 3;
+    display:flexbox;
+}

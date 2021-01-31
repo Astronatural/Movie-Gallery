@@ -1,5 +1,6 @@
 //  import galleryItems from "../../../server/modules/gallery.data";  //  server/modules/gallery.data.js
-  import GalleryItem from "../GalleryItem/GalleryItem.jsx";
+import GalleryItem from "../GalleryItem/GalleryItem.jsx";
+import './gl.css';
 
 function GalleryList({ galleryItems, fetchGallery, setLike }) {
 
@@ -10,15 +11,18 @@ function GalleryList({ galleryItems, fetchGallery, setLike }) {
 
     return (
         <>
-            {galleryItems.map((galleryItems) => (
-                <div key={galleryItems.id} >
-                    <GalleryItem 
-                    galleryItems={galleryItems} 
-                    fetchGallery={fetchGallery}
-                        setLike={setLike}
-                    />
-                </div>
-            ))}
+            <div className="posterWall">
+                {galleryItems.map((galleryItems) => (
+                    <div className="posterBox" key={galleryItems.id} >
+                        <GalleryItem
+                            galleryItems={galleryItems}
+                            fetchGallery={fetchGallery}
+                            setLike={setLike}
+                        />
+                    </div>
+                ))}
+            </div>
+
         </>
     ) /* end return*/
 } /* end gellery*/

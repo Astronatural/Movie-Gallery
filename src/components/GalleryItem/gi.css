@@ -1,0 +1,16 @@
+button {
+    display: flex;
+    background-color: rgb(138, 132, 47);
+    margin: 1em;
+    color: rgb(226, 240, 226);
+    max-width: 25%;
+    min-width: 25%;
+    justify-content: center;
+    align-self: center;
+}
+
+img {
+    border: .5em inset;
+    border-radius: .5em;
+    margin: 2em;
+}
