@@ -23,9 +23,8 @@ function GalleryItem({ galleryItems, setLike }) {
      else {
          return <p width="45%" height="60%" margin="10em">{galleryItems.description}</p>
     }
-    }
+    }  // end picSwap
    
-
 
     return (
         <>

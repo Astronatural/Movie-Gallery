@@ -3,7 +3,6 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList.jsx';  //src/components/Gallery
-import GalleryItem from '../GalleryItem/GalleryItem.jsx';  //src/components/Gallery
 
 
 function App() {
@@ -24,6 +23,7 @@ function App() {
     })
   }
 
+
   // Install the "likes" functionality.
   const setLike = (itemId) => {
     console.log(`Fav button pressed! target id`, itemId);
@@ -39,8 +39,6 @@ function App() {
       console.log(error);
     })
   }
-
-
 
 
   //  load gallery on init
@@ -59,11 +57,6 @@ function App() {
         fetchGallery={fetchGallery}
         setLike={setLike}
       />
-      {/* <GalleryItem
-        galleryItems={galleryItems}
-        fetchGallery={fetchGallery}
-        setLike={setLike}
-      /> */}
     </div>
   );
 }
