@@ -27,8 +27,8 @@ function GalleryItem({ galleryItems, setLike }) {
 
     return (
         <>
-            {picSwap()}
-        <img src={galleryItems.path} width="15%" height="20%"></img>
+            <div onClick={() => togglePic()}>{picSwap()}</div>
+            {/* <img src={galleryItems.path} width="15%" height="20%"></img>   leave in for test*/}
             <p>{galleryItems.likes} People love this film too!</p>
             <button onClick={()=>setLike(galleryItems.id)}>My Fav too!</button>
         </>
