@@ -5,7 +5,6 @@ const galleryItems = [
     { id: 5, path: 'images/seven_samurai.jpg', description: 'One of the rare 3-hour movies that does not feel "long" to me.', likes: 0 },
     { id: 6, path: 'images/Spirited_Away.jpg', description: 'I have always loved animated films and this is one of the best.', likes: 0 },
     { id: 7, path: 'images/phantom.jpg', description: 'It is cheezy but I have loved it for a long time now.', likes: 0 }
-
 ];
 
 module.exports = galleryItems;

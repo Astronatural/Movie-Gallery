@@ -50,7 +50,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Favorite Movies of Mine; an Autobiogrphical-Cinematic Retrospective</h1>
+        <h1 className="App-title">Favorite Movies of Mine</h1>
+        <h2>An Autobiogrphical-Cinematic Retrospective</h2>
       </header>
       <GalleryList
         galleryItems={galleryItems}
