@@ -3,9 +3,11 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList.jsx';  //src/components/Gallery
+import { ChakraProvider } from "@chakra-ui/react"
 
 
-function App() {
+
+function App({ Component }) {
   //  Hooks go here.
   const [galleryItems, setGalleryItems] = useState([]);
 
@@ -53,6 +55,9 @@ function App() {
         <h1 className="App-title">Favorite Movies of Mine</h1>
         <h2>An Autobiogrphical-Cinematic Retrospective</h2>
       </header>
+      <ChakraProvider>
+        <Component />
+      </ChakraProvider>
       <GalleryList
         galleryItems={galleryItems}
         fetchGallery={fetchGallery}
